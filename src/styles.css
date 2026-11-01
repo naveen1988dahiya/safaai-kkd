@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", "Noto Sans Devanagari", system-ui, sans-serif;
+  --color-brand: #1a56db;
+  --color-brand-dark: #143fa8;
+  --color-canvas: #eef3fb;
+  --color-ink: #172033;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-danger: #dc2626;
+  --color-ok: #16a34a;
+  --color-night: #0d1024;
+  --color-night-2: #171433;
+  --color-night-3: #211c45;
+  --color-night-fg: #f5f7ff;
+  --color-night-muted: #b7b3d6;
+  --color-night-line: #332d5c;
+  --color-accent: #7c5cff;
+  --color-warn: #f5b942;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+  body {
+    margin: 0;
+    background: #d7e0ee;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  input,
+  button,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+  button:disabled {
+    opacity: 0.55;
+  }
+}
+
+.g-blue { background: linear-gradient(135deg, #2563eb, #22d3ee); }
+.g-orange { background: linear-gradient(135deg, #fb923c, #f59e0b); }
+.g-pink { background: linear-gradient(135deg, #e879f9, #8b5cf6); }
+.g-teal { background: linear-gradient(135deg, #2dd4bf, #0ea5e9); }
+.g-assign { background: linear-gradient(90deg, #fb7185, #f59e0b); }
+.dash-zones { background: linear-gradient(160deg, #6a4dff, #7d6bff); }
+.dash-insp { background: linear-gradient(160deg, #2ad4c8, #49c7d8); }
+.dash-reports { background: linear-gradient(160deg, #e45cff, #b44bff); }
+.dash-avg { background: linear-gradient(160deg, #ff8d32, #ffb01a); }
+.dash-assign { background: linear-gradient(100deg, #ff8a1f 0%, #ff6a6a 48%, #d946ef 100%); box-shadow: 0 10px 28px rgba(255, 120, 40, 0.35); }
+.g-login { background: linear-gradient(90deg, #6366f1, #c026d3); }
+.g-live { background: linear-gradient(90deg, #fb923c, #ef4444); }
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+}
